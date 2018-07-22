@@ -87,7 +87,7 @@ Does Kotlin creates a class internally?
     var myNumber = 10
     var myDecimal = 1.1
  ``` 
-    another way : 
+   *another way :* 
   ``` kotlin
       var myString :String    // Mutable String
       myString =  "Hello World"
