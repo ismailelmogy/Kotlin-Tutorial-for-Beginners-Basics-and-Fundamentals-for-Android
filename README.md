@@ -34,7 +34,7 @@ fun main(args : Array<String>){
  
  - Unit stands for void in Kotlin
  
- - no semicolon ( ; ) in kotlin in the end of each statement
+ - No semicolon ( ; ) in kotlin in the end of each statement
  
  - We don't need the concept of static , each function by default is static.
 
@@ -113,6 +113,8 @@ Does Kotlin creates a class internally?
    // code in kotlin 
   var personObj =  Person()  
   ``` 
+  
+   * String Interpolation : 
 
    
   
