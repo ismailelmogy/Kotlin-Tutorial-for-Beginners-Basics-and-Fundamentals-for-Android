@@ -116,8 +116,25 @@ Does Kotlin creates a class internally?
   
    * String Interpolation : 
 
+  In Java you use concatenation like this :
+  ``` java
+  System.out.println("The name of the person is " + personObj.name);
    
+  ```
+  But in Kotlin we use the concept called String Interpolation like this example :
   
+  ``` kotlin
+   fun main(args: Array<String>) {
+    var personObj = Person() // Declare the object of the class
+    personObj.name = "ismail elmogy"
+    println("The name of the person is ${personObj.name}" )  // String Interpolation
+    
+}
+
+class Person {
+    var name = " "
+}
+  ``` 
  
   
    
