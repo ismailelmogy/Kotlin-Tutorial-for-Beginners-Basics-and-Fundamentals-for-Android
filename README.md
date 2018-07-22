@@ -80,6 +80,22 @@ Does Kotlin creates a class internally?
    * This is comment in line 2
    */
  ``` 
+ 
+ * Declaring variables :
+ ``` kotlin
+    var myString = "Hello World"
+    var myNumber = 10
+    var myDecimal = 1.1
+ ``` 
+    another way : 
+  ``` kotlin
+      var myString :String    // Mutable String
+      myString =  "Hello World"
+      myString = " Another World "
+  ``` 
   
-  
-  
+ * Declaring constant variables :
+   ``` kotlin
+       val myAnotherStr = " My Constant String  Value" // Immutable String
+   ``` 
+   
