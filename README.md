@@ -105,7 +105,7 @@ Does Kotlin creates a class internally?
   
     Person personObj = new Person( ) //  code in Java
   ```
-  equals in Kotlin
+   equals in Kotlin
   
   ``` kotlin
   var personObj =  Person() // code in kotlin
