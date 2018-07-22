@@ -101,15 +101,21 @@ Does Kotlin creates a class internally?
    ``` 
    
   * Declaring new object of any class :
+  
+  In Java we declare new object of any class By this way  : 
   ``` java
-  
-    Person personObj = new Person( ) //  code in Java
+   Person personObj = new Person() // we consider that there is a class called Person
+   
   ```
-   equals in Kotlin
+  But in Kotlin there is no keyword (new) like this example :
   
-  ``` kotlin
-  var personObj =  Person() // code in kotlin
- 
+   ``` kotlin
+   // code in kotlin 
+  var personObj =  Person()  
   ``` 
+
+   
+  
+ 
   
    
