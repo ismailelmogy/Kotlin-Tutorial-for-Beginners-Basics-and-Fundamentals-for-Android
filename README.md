@@ -95,7 +95,21 @@ Does Kotlin creates a class internally?
   ``` 
   
  * Declaring constant variables :
+ 
    ``` kotlin
        val myAnotherStr = " My Constant String  Value" // Immutable String
    ``` 
+   
+  * Declaring new object of any class :
+  ``` java
+  
+    Person personObj = new Person( ) //  code in Java
+  ```
+  equals in Kotlin
+  
+  ``` kotlin
+  var personObj =  Person() // code in kotlin
+ 
+  ``` 
+  
    
