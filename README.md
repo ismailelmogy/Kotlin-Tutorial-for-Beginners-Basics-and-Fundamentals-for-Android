@@ -58,8 +58,28 @@ Does Kotlin creates a class internally?
 
     The kotlin compiler internally creates a class file which is loaded into memory for execution in runtime.
   --------------------------------------------------------------------------------------------------------------------------------
-  
+   ### Kotlin programming Series
+    Quick overview of Basic Syntax
+    - Functions 
+    - Variables 
+    - Class 
+    - Constructor 
+    - Comments
     
+   * Inline Comment :
+    
+ ``` kotlin
+    // This is a inline comment
+ ``` 
+    
+   * MultiLine Comment : 
+   
+ ``` kotlin
+   /**
+   * This is comment in line 1
+   * This is comment in line 2
+   */
+ ``` 
   
   
   
