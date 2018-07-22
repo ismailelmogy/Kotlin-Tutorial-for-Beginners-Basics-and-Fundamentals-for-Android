@@ -2,7 +2,7 @@
 
 In this documentation we will going with the basics of kotlin for Beginners .
 
-## First Step to start coding by Kotlin : Install JDK and Intellij IDEA.
+### First Step to start coding by Kotlin : Install JDK and Intellij IDEA.
 
  You can watch the video of installation from  [Here](https://www.youtube.com/watch?v=toesg2HLMSs&index=2&list=PLlxmoA0rQ-LwgK1JsnMsakYNACYGa1cjR)
 
@@ -35,6 +35,46 @@ fun main(args : Array<String>){
  - Unit stands for void in Kotlin
  
  - no semicolon ( ; ) in kotlin in the end of each statement
+ 
+ - We don't need the concept of static , each function by default is static.
 
-----------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------
 
+### " Hello World " in Kotlin : How it works ?
+ 
+    No Need of class
+
+![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/No%20need%20of%20class%20in%20kotlin.png )
+
+How Does it works?
+
+- Java Demands class files.
+
+- Kotlin needs JVM in runtime similar to java.
+
+Does Kotlin creates a class internally?
+
+  - Yes
+
+    The kotlin compiler internally creates a class file which is loaded into memory for execution in runtime.
+  ---------------------------------------------------------------------------------------------------------------------------------
+ ### Kotlin programming Series
+    Quick overview of Basic Syntax
+    - Functions 
+    - Variables 
+    - Class 
+    - Constructor 
+    - Comments
+    
+ * Inline Comment : 
+       
+``` java
+      println(" Hello World ") // inline comment  
+      
+``` 
+      
+      
+    
+  
+  
+  
