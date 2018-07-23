@@ -135,6 +135,9 @@ class Person {
     var name = " "
 }
   ``` 
+ * REPL stands for : Read-Eval-Print-Loop
+ You can use it inside IntelliJ from Tools --> Kotlin ---> Kotlin REPL
  
+ ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/REPL.png)
   
    
