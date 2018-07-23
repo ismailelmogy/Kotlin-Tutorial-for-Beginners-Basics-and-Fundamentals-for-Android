@@ -173,8 +173,8 @@ class Person {
    
    ``` kotlin
         val name = "Sam"
-       val str = "Hello $name"
-       println("The statement is $str . The number of characters in the statement are ${str.length}")
+        val str = "Hello $name"
+        println("The statement is $str . The number of characters in the statement are ${str.length}")
    ```
   another example:
   
@@ -205,4 +205,60 @@ class Rectangle {
 
    ```
 
+  * Ranges in Kotlin :
   
+  ``` kotlin
+  
+    val r1 = 1..5
+    // This range contains the number 1,2,3,4,5
+
+    val r2 = 5 downTo 1
+    // This range contains the number 5,4,3,2,1
+
+    val r3 = 5 downTo 1 step 2
+    // This range contains the number 5,3,1
+
+    var r4 = 'a'..'z'
+    // This range contains "a", "b","c",...,"z"
+
+    var isPresent = 'c' in r4  
+    print(isPresent) // output : true
+
+    var countDown = 10.downTo(1)
+    // This range contains the number 10,9,8,..,1
+
+    var moveUp = 1.rangeTo(10)
+    // This range contains the number 1,2,3,..,10
+  ``` 
+--------------------------------------------------------------------------------------------------------------------------------
+
+* Control Statements in Kotlin :
+
+- If as expression
+     
+     example :
+     
+     ```kotlin
+      val a = 2
+      val b = 5
+      var maxValue : Int
+
+      if(a > b)
+         maxValue = a
+      else
+         maxValue = b
+       print(maxValue)
+     ```
+     > output : 5
+     
+     same example by using if as expression :
+     ```kotlin
+      val a = 2
+      val b = 5
+      var maxValue : Int = if(a > b)
+                    a
+               else   
+                    b
+     println(maxValue)
+    ```
+     
