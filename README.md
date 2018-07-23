@@ -136,8 +136,19 @@ class Person {
 }
   ``` 
  * REPL stands for : Read-Eval-Print-Loop
+ 
  You can use it inside IntelliJ from Tools --> Kotlin ---> Kotlin REPL
  
  ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/REPL.png)
   
+  
+  * Data Types:
+  
+  All are objects and no primitive data types in Kotlin.
+  
+  ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Data%20Types%20in%20Kotlin.png)
+  
+ some  examples of declaring data types in Kotlin :
+ 
+ ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Declaring%20data%20types%20in%20kotlin.png)
    
