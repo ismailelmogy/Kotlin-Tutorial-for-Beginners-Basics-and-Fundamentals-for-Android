@@ -148,7 +148,37 @@ class Person {
   
   ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Data%20Types%20in%20Kotlin.png)
   
- some  examples of declaring data types in Kotlin :
+ Some examples of declaring data types in Kotlin :
  
  ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Declaring%20data%20types%20in%20kotlin.png)
+ 
+ * Var vs Val :
+ 
+ 
+ ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Var%20vs%20Val.png)
+ 
+ * Kotlin String Templates (Interpolation):
+ 
+      instead of using concatenation in Kotlin , You can use Interpolation.
+  
+  example:
+  
+     ``` kotlin
+     val name = "sam"
+     val str = "Hello " + name
+     println(str)
+    
+     ```
+   You can make it better in Kotlin like this :
+   
+     ``` kotlin
+    val name = "Sam"
+    val str = "Hello $name"
+    println("The statement is $str . The number of characters in the statement are ${str.length}")
+    
+     ```
+   
+ 
+ 
+ 
    
