@@ -163,22 +163,46 @@ class Person {
   
   example:
   
-      ``` kotlin
+   ``` kotlin
         val name = "sam"
         val str = "Hello " + name
         println(str)
-    
-      ```
+   ```
+  
    You can make it better in Kotlin like this :
    
-      ``` kotlin
-       val name = "Sam"
+   ``` kotlin
+        val name = "Sam"
        val str = "Hello $name"
        println("The statement is $str . The number of characters in the statement are ${str.length}")
-    
-      ```
+   ```
+  another example:
+  
+   ``` kotlin
+         val a = 10
+         val b = 5
+         print("The sum of $a and $b is ${a+b}")
+   ```
    
- 
- 
- 
+   another example of Interplation:
    
+  
+   ``` kotlin
+       fun main(args : Array<String>){
+       var rect = Rectangle()
+       rect.length = 10
+       rect.breadth = 5
+
+    println  ("The length of the rectangle is ${rect.length} and the breadth of the rectangle is ${rect.breadth}" +
+            " The area of the rectangle is ${rect.length *rect.breadth}")
+
+}
+
+class Rectangle {
+    var length : Int = 0
+    var breadth : Int = 0
+}
+
+   ```
+
+  
