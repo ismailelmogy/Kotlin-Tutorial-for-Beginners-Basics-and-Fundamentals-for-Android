@@ -163,20 +163,20 @@ class Person {
   
   example:
   
-     ``` kotlin
-     val name = "sam"
-     val str = "Hello " + name
-     println(str)
+      ``` kotlin
+        val name = "sam"
+        val str = "Hello " + name
+        println(str)
     
-     ```
+      ```
    You can make it better in Kotlin like this :
    
-     ``` kotlin
-    val name = "Sam"
-    val str = "Hello $name"
-    println("The statement is $str . The number of characters in the statement are ${str.length}")
+      ``` kotlin
+       val name = "Sam"
+       val str = "Hello $name"
+       println("The statement is $str . The number of characters in the statement are ${str.length}")
     
-     ```
+      ```
    
  
  
