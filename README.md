@@ -309,7 +309,7 @@ class Rectangle {
      
       ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/loops%20or%20iterators.png)
        
-     * For Loop:
+     * For Loop :
      
        ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/For%20Loop.png)
       
@@ -318,17 +318,19 @@ class Rectangle {
       ```kotlin
        for (i in 1..10){
        if( i % 2 == 0){
-           println(i)
+           print(i)
+           print(" ")
        }
       }
       ```
+      output :
       > 2
         4
         6
         8
         10
       
-      * While Loop:
+      * While Loop :
       
       ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/While%20Loop.png)
       
@@ -336,19 +338,21 @@ class Rectangle {
      var i :Int = 1
     while (i <= 10){
         if(i % 2 == 0){
-            println(i)
+            print(i)
+            print(" ")
         }
         i++
        }
      }
     ```
+    output :
       > 2
         4
         6
         8
         10
         
-      * Do While Loop:  
+      * Do While Loop :  
       
         ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Do%20While%20Loop.png)
         
@@ -356,18 +360,69 @@ class Rectangle {
         var i: Int = 1
         do {
         if (i % 2 == 0) {
-            println(i)
+            print(i)
+            print(" ")
            }
          i++
           } while (i <= 10)
         ```
+     output :
       > 2
         4
         6
         8
         10
         
+       
+     *  Break Statements :     
         
+        ```kotlin
+         for ( i in 1..10){
+        println(i)
+        if (i == 5)
+             break
+        }
+        ```
+           
+    output :
+      > 1
+        2
+        3
+        4
+        5
+     
+     another example:
         
-      
+      ```kotlin
+       for(i in 1..3){
+          for(j in 1..3){
+          println("$i  $j")
+            if(i== 2 && j == 2)
+             break
+             }
+           }
+      ```
+   
+   output : 
+   
+   ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/break%20statement%20in%20nested%20for%20loop.png)
+   
+   another example:
+        
+    ```kotlin  
+    myLoop@ for ( i in 1..3){
+    for( j in 1..3){
+         println("$i $j")
+         if (i == 2 && j == 2)
+             break@myLoop
+          }
+        }
+    ```
+           
+      output : 
+   
+   ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/exit%20the%20%20outside%20for%20loop%20with%20break%20statement%20.png)
+   
+   -----------------------------------------------------------------------------------------------------------------------------
+   
       
