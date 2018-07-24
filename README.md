@@ -262,3 +262,112 @@ class Rectangle {
      println(maxValue)
     ```
      
+ - When as expression
+     
+      example :
+     
+     
+      ```kotlin
+        val x = 5
+        when(x){
+          0,1 -> println(" x is 0 or 1 ")
+          2 -> println(" x is 2 ")
+         in 11 .. 20 -> println("x is in the range from 11 to 20")
+          //  You can use !in 11..20 ! means not
+         else ->   //  like the default value in Switch
+         {
+           println(" x value is unknown")
+         }
+           }
+      ```
+     
+     
+     another example :
+     
+     
+     ```kotlin
+    val x = 3
+    var str : String  =  when(x){
+        1 -> " x is 1"
+        2 -> " x is 2"
+        else -> {
+            "x is unknown"
+        }
+       } 
+     ```
+    --------------------------------------------------------------------------------------------------------------------------------
+    
+*  Iterators [Loops]
+    
+   -  For Loop
+
+   -  While Loop
+
+   -  Do While Loop
+
+   -  Break and Continue Statements
+     
+      ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/loops%20or%20iterators.png)
+       
+     * For Loop:
+     
+       ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/For%20Loop.png)
+      
+      example :
+      
+      ```kotlin
+       for (i in 1..10){
+       if( i % 2 == 0){
+           println(i)
+       }
+      }
+      ```
+      > 2
+        4
+        6
+        8
+        10
+      
+      * While Loop:
+      
+      ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/While%20Loop.png)
+      
+      ```kotlin
+     var i :Int = 1
+    while (i <= 10){
+        if(i % 2 == 0){
+            println(i)
+        }
+        i++
+       }
+     }
+    ```
+      > 2
+        4
+        6
+        8
+        10
+        
+      * Do While Loop:  
+      
+        ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Do%20While%20Loop.png)
+        
+        ```kotlin
+        var i: Int = 1
+        do {
+        if (i % 2 == 0) {
+            println(i)
+           }
+         i++
+          } while (i <= 10)
+        ```
+      > 2
+        4
+        6
+        8
+        10
+        
+        
+        
+      
+      
