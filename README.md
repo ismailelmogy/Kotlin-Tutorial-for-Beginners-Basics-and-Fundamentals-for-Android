@@ -471,4 +471,83 @@ class Rectangle {
   
    -----------------------------------------------------------------------------------------------------------------------------
    
+    *  Kotlin Functions :
+    
+    
+  ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Kotlin%20Functions%20Basics%20and%20syntax.png)
+  
+  example :
+  
+   ```kotlin  
+    fun main(args: Array<String>) {
+    var sum = add(5, 7)
+    println(" Sum is $sum")
+    }
+     fun add(a: Int, b: Int): Int {
+    return a + b
+          }
+   ```
+  
+  output :
+  
+  > Sum is 12 
+
+
+   * Kotlin Functions as Expression :
+   
+   
+   ```kotlin  
+   fun main(args: Array<String>) {
+    var maxValue = max(10, 6)
+    println("The greater number is $maxValue")
+      }
+
+   fun max(a: Int, b: Int): Int =
+        if (a > b)
+            a
+        else
+            b
+   ```
+   
+   output : 
+   
+   > The greater number is 10
+
+-----------------------------------------------------------------------------------------------------------------------------
+   
+  *  Interoperability:
+
+      -  You can call Java Functions from Kotlin and Kotlin Functions from Java .
+      -  You ca n have Java and Kotlin files with same project .
       
+    
+    
+     ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/How%20Java%20and%20kotlin%20code%20runs%20.png)
+     
+ 
+ 
+       
+     ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/example%20of%20converting%20kotlin%20file%20after%20compilation%20.png)
+     
+     You can see a simple example of using java and kotlin together from  [Here](https://github.com/ismailelmogy/KotlinProgramming)
+     
+
+ *  Default Functions with Interoperability:
+ 
+     
+     ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Kotlin%20Default%20Functions%20with%20Interoperability%20.png)
+     
+     
+      
+     ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/JVMOverloads%20for%20Interoperability.png)
+     
+     
+     You can see a simple example of that in the second commit of this project from  [Here](https://github.com/ismailelmogy/KotlinProgramming)
+     
+     
+ *  Named Parameters:
+ 
+    - I
+     
+        
+        
