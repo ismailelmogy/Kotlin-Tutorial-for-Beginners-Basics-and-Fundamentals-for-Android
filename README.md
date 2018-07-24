@@ -378,7 +378,8 @@ class Rectangle {
         
         ```kotlin
          for ( i in 1..10){
-        println(i)
+        print(i)
+        print(" ")
         if (i == 5)
              break
         }
@@ -423,6 +424,51 @@ class Rectangle {
    
    ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/exit%20the%20%20outside%20for%20loop%20with%20break%20statement%20.png)
    
+      *  Continue Statements :   
+      
+      ```kotlin
+       for (i in 1..10){
+      if(i == 5)
+          continue
+      println(i)
+       }
+      ```
+        
+      output : 
+   
+   ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/continue%20at%205%20from%201%20to%2010.png)
+   
+   another example:
+        
+    ```kotlin  
+    for (i in 1..10){
+      if(i % 2 == 0)
+          continue
+      println(i)
+    }
+    ```
+           
+      output : 
+   
+   ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/odd%20numbers%20with%20continue%20statement.png)
+   
+     another example:
+        
+    ```kotlin  
+    outer@ for (i in 1..3){
+    for (j in 1..3){
+        if ( i == 2 && j == 2)
+            continue@outer
+        println(" $i $j")
+    }
+   }
+    ```
+           
+      output : 
+   
+   ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/outer%20for%20with%20continue%20statement.png)
+   
+  
    -----------------------------------------------------------------------------------------------------------------------------
    
       
