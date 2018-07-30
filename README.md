@@ -176,7 +176,7 @@ class Person {
         val str = "Hello $name"
         println("The statement is $str . The number of characters in the statement are ${str.length}")
    ```
-  another example:
+  *another example :* 
   
    ``` kotlin
          val a = 10
@@ -184,7 +184,7 @@ class Person {
          print("The sum of $a and $b is ${a+b}")
    ```
    
-   another example of Interplation:
+   *another example of Interplation:*
    
   
    ``` kotlin
@@ -266,7 +266,6 @@ class Rectangle {
      
       example :
      
-     
       ```kotlin
         val x = 5
         when(x){
@@ -282,7 +281,7 @@ class Rectangle {
       ```
      
      
-     another example :
+     *another example :*
      
      
      ```kotlin
@@ -524,8 +523,6 @@ class Rectangle {
     
      ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/How%20Java%20and%20kotlin%20code%20runs%20.png)
      
- 
- 
        
      ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/example%20of%20converting%20kotlin%20file%20after%20compilation%20.png)
      
@@ -538,7 +535,6 @@ class Rectangle {
      ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Kotlin%20Default%20Functions%20with%20Interoperability%20.png)
      
      
-      
      ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/JVMOverloads%20for%20Interoperability.png)
      
      
@@ -548,8 +544,7 @@ class Rectangle {
  *  Named Parameters:
  
     - It's a pure kotlin feature. Not present in Java.
-    
-    
+   
    ```kotlin  
      fun main(args: Array<String>) {
      findVolume(length = 10,breadth = 5 ,height = 20)
@@ -563,8 +558,274 @@ class Rectangle {
    
    }
    ```
+   
+      
+   *  Extension Functions:
+   
+      ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Extension%20Functions.png)
+   
     
-    
+   ```kotlin  
+   fun main(args : Array<String>){
+    var student = Student ()
+    println(" Pass status : " + student.hasPassed(57))
+    println(" Scholarship Status : "  + student.isScholar(57))
+   }
+
+fun Student.isScholar (marks: Int) : Boolean{
+    return marks > 95
+  }
+
+class Student{
+    fun hasPassed(marks : Int) : Boolean{
+        return  marks > 40
+    }
+   }
+   ```
      
+   
+   output : 
+   
+   >  Pass status : true
+   
+   >  Scholarship Status : false
+                
+   another example:
+   
+   ```kotlin  
+ fun main(args : Array<String>){
+    val str1 : String = "Hello "
+    val str2 : String = "World"
+    var str3 : String = "Hey "
+    println(str3.add(str1,str2))
+    val x:Int = 6
+    val y:Int = 10
+    val greaterVal = x.greaterValue(y)
+    println( greaterVal )
+}
+
+fun String.add(s1 : String , s2 : String): String{
+    return this + s1 + s2;
+}
+
+fun Int.greaterValue(other : Int) : Int{
+    if( this  > other)
+        return this
+    else
+        return other
+}
+   ```
+   
+   output : 
+   
+   > Hey Hello World
+   
+   > 10
+   
+   
+   * Infix Function:
+   
+     -  All infix functions are extension functions But all extension functions are not infix functions.
+     -  Infix function just have one parameter.
+   
+   
+   ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Infix%20Functions.png)
+   
+     
+   ```kotlin  
+   fun main(args : Array<String>){
+    val x:Int = 6
+    val y:Int = 10
+    val greaterVal = x greaterValue y     //   x.greaterValue(y)
+    println( greaterVal )
+  }
+ 
+infix fun Int.greaterValue(other : Int) : Int {   // Infix Function and also Extension Function
+    if( this  > other)
+        return this
+    else
+        return other
+   }
+   ```
+   
+    output : 10
+     
+   * TailRec Functions [Recursive Functions] :
+       
+       
+       ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/TailRec%20Functions.png)
+      
+ ```kotlin  
+   fun main(args : Array<String>){
+    println(getFibonacciNumber(8, BigInteger("0"),BigInteger("1")))
+    // 0 1 1 2 3 5 8 13 21 34 ... series 
+ }
+
+ tailrec fun getFibonacciNumber(n : Int ,a :BigInteger , b : BigInteger): BigInteger{
+    if ( n == 0)
+        return b
+    else
+       return  getFibonacciNumber(n - 1 , a + b ,a)
+   }
+ ```
+    output : 13
+    
+-----------------------------------------------------------------------------------------------------------------------------
+
+* Object Oriented in Kotlin :
+
+   -  Class Definition, init Block and Primary Constructor :
+  
+        ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/class%20definition_init%20block%20and%20primary%20constructor.png)
         
+     example:
+  ```kotlin
+  fun main(args : Array<String>){
+    var student = Student("Ismail Elmogy")
+  }
+  class Student(var name : String){
+    init{
+        println("Student has got a name as $name")
+         }
+    } 
+   
+  ```
+  
+      output : Student has got a name as Ismail Elmogy
+      
+    
+    -  Secondary Constructor :
+     
+          - You can not use the secondary constructor without calling the primary constructor in it.
+          - You can not define any property as a parameter of the secondary constructor.
+          
+          example:
+  ```kotlin
+  fun main(args : Array<String>){
+    var student = Student("Ismail Elmogy",30)
+    println(student.id)
+    }
+    class Student(var name : String){
+    var id:Int = -1
+    init{
+        println("Student has got a name as $name")
+    }
+    constructor(name :String,id : Int) : this(name){
+        this.id = id
+    }
+  ```
+  
+      output : Student has got a name as Ismail Elmogy
+               30   
+    
+     - Inheritance in Kotlin :
+     
+            By default classes are : public and final. For Inheritance you need to make a class 'open'.
+     
+     
+     ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Inheritance.png)
+   
         
+     ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Types%20of%20Inheritance.png)
+   
+   
+   
+   ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Super%20Class%20Any.png)
+   
+   
+   
+    ![alt tag](https://github.com/ismailelmogy/Kotlin-Tutorial-for-Beginners-Basics-and-Fundamentals-for-Android/blob/master/Inheritance%20in%20kotlin.png)
+   
+   
+     example:
+     
+  ```kotlin
+   fun main(args : Array<String>){
+     var dog = Dog()
+      dog.breed = "labra"
+      dog.color = "black"
+      dog.eat()
+      dog.bark()
+
+      var cat = Cat()
+      cat.age = 7
+      cat.color = "brown"
+      cat.meow()
+      cat.eat()
+      
+      var animal = Animal()
+      animal.color = "white"
+      animal.eat()
+
+  }
+
+  open class Animal{
+    var color : String = " "
+    fun eat(){
+        println("Eat")
+    }
+  }
+
+  class Dog :Animal() {
+    var breed : String = " "
+    fun bark(){
+        println("Bark")
+    }
+  }
+
+  class Cat : Animal(){
+    var age : Int = -1
+    fun meow(){
+        println("Meow")
+    }
+  }
+  ```
+     -  Overriding Properties and Methods during Inheritance
+               
+               
+     ```kotlin
+      fun main(args : Array<String>){
+      var dog = Dog()
+      dog.breed = "labra"
+      dog.color = "black"
+      dog.eat()
+      dog.bark()
+      
+      var cat = Cat()
+      cat.age = 7
+      cat.color = "Brown"
+      cat.meow()
+      cat.eat()
+      
+      var animal = Animal()
+      animal.color = "white"
+      animal.eat()
+       }
+
+      open class Animal{
+      var color : String = " "
+      fun eat(){
+        println("Eat")
+        }
+       }
+
+      class Dog :Animal() {
+      var breed : String = " "
+      fun bark(){
+        println("Bark")
+       }
+      }
+
+      class Cat : Animal(){
+      var age : Int = -1
+      fun meow(){
+        println("Meow")
+      }
+      }
+     ```
+          output: Animal Eating
+                  Dog is eating
+                  Black
+                  Cat is eating
+                  Brown
+     
