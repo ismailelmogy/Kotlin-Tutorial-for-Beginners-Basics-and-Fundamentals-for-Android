@@ -781,47 +781,48 @@ infix fun Int.greaterValue(other : Int) : Int {   // Infix Function and also Ext
   }
   ```
      -  Overriding Properties and Methods during Inheritance
-               
-               
+     
+     example:
+              
      ```kotlin
-      fun main(args : Array<String>){
-      var dog = Dog()
-      dog.breed = "labra"
-      dog.color = "black"
-      dog.eat()
-      dog.bark()
-      
-      var cat = Cat()
-      cat.age = 7
-      cat.color = "Brown"
-      cat.meow()
-      cat.eat()
-      
-      var animal = Animal()
-      animal.color = "white"
-      animal.eat()
-       }
+   fun main(args : Array<String>){
+    var dog = Dog()
+    dog.eat()
+    println(dog.color)
+    var cat = Cat()
+    cat.eat()
+    println(cat.color)
+  }
+  open class Animal{
+    open  var color : String = "White"
+    open fun eat(){
+        println("Animal is Eating")
+    }
+  }
 
-      open class Animal{
-      var color : String = " "
-      fun eat(){
-        println("Eat")
-        }
-       }
-
-      class Dog :Animal() {
-      var breed : String = " "
-      fun bark(){
+  class Dog :Animal() {
+    var breed : String = " "
+    override var color ="Black"
+    fun bark(){
         println("Bark")
-       }
-      }
+    }
+    override fun eat(){
+        super<Animal>.eat()    // Animal Eating
+        println("Dog is eating")
+    }
+  }
 
-      class Cat : Animal(){
-      var age : Int = -1
-      fun meow(){
+  class Cat : Animal(){
+    var age : Int = -1
+    override var color = "Brown"
+    fun meow(){
         println("Meow")
-      }
-      }
+    }
+    override fun eat(){
+        println("Cat is eating")
+    }
+  }
+
      ```
           output: Animal Eating
                   Dog is eating
@@ -829,3 +830,42 @@ infix fun Int.greaterValue(other : Int) : Int {   // Infix Function and also Ext
                   Cat is eating
                   Brown
      
+
+
+   -  Kotlin Inheritance with Primary and Secondary Constructors :
+  
+  
+             
+     ```kotlin
+
+   fun main(args : Array<String>){
+    var dog = Dog("Black","Pug")
+    }
+
+    open class Animal {
+     //    init {
+     //        println("From Animal Init: $color")
+     //    }
+
+    var color : String = " "
+    constructor(color: String){
+        this.color = color
+        println("From Animal: $color")
+    }
+      }
+
+      class Dog : Animal {
+              var breed: String = ""
+               //    init {
+               //        println("From Dog Init: $color and $breed")
+               //    }
+
+    constructor(color: String , breed : String) : super(color){
+        this.breed = breed
+        println("From Dog: $color and $breed ")
+    }
+      }
+     ```
+   
+   
+   
